@@ -1,6 +1,0 @@
-echo "# Merge_Sort" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/zakidevara/Merge_Sort.git
-git push -u origin master
