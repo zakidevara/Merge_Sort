@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1561348996 source:c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764\list.cpp
+	"List.h"
+
+1561349345 c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764\list.h
+	<stdio.h>
+	<malloc.h>
+	<stdbool.h>
+
+1561351842 source:c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764\main.cpp
+	"List.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
