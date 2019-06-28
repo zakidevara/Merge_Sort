@@ -53,6 +53,7 @@ address Search (address p, infotype nilai);
 /* Jika ada, mengirimkan address elemen tsb. */
 /* Jika tidak ada, mengirimkan Nil */
 /* Menggunakan variabel bertype boolean */
+address SearchBfr(address p, infotype nilai);
 void InsertAfter (address * pBef, address PNew);
 /* Tujuan : Menyambungkan 1 Node baru(PNew) stlah node tertentu(PBef) */
 /* IS : pBef sudah dialokasi */
@@ -66,7 +67,7 @@ void Del_Akhir (address * p, infotype * X);
 /* IS : P TIDAK Kosong */
 /* FS : Elemen terakhir list dihapus : nilai info disimpan pada X */
 /* dan alamat elemen terakhir di dealokasi */
-void Del_After (address * pBef, infotype * X);
+void Del_After (address pBef);
 /* IS : pBef TIDAK Kosong (hasil search posisi node sebelum yang didel)*/
 /* FS : menghapus Node setelah pBef */
 /* nilai info node yang dihapus disimpan pada X */

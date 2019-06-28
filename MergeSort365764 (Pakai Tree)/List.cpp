@@ -95,6 +95,20 @@ address Search (address p, infotype nilai){
     return x;
 }
 
+address SearchBfr (address p, infotype nilai){
+    address x = Nil ;
+    if(p->info == nilai) return NULL;
+
+    while(!isEmpty(p)){
+        if(info(p->next) == nilai){
+            x = p;
+            return x;
+        }
+        p = next(p);
+    }
+    return x;
+}
+
 void InsertAfter (address * pBef, address PNew){
 /* Tujuan : Menyambungkan 1 Node baru(PNew) stlah node tertentu(PBef) */
 /* IS : pBef sudah dialokasi */
@@ -134,17 +148,16 @@ void Del_Akhir (address * p, infotype * X){
     DeAlokasi(&PDel);
 }
 
-void Del_After (address * pBef, infotype * X){
+void Del_After (address pBef){
 /* IS : pBef TIDAK Kosong (hasil search posisi node sebelum yang didel)*/
 /* FS : menghapus Node setelah pBef */
 /* nilai info node yang dihapus disimpan pada X */
 /* dan alamat elemen setelah pBef di dealokasi */
 
     address PDel,PNext;
-    PDel = next(*pBef);
-    *X = info(PDel);
+    PDel = next(pBef);
     PNext = next(PDel);
-    next(*pBef) = PNext;
+    next(pBef) = PNext;
     next(PDel) = Nil;
     DeAlokasi(&PDel);
 

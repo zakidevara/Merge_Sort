@@ -41,21 +41,22 @@
 	<string.h>
 	<stdbool.h>
 
-1561361530 source:c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764 (pakai tree)\list.cpp
+1561764768 source:c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764 (pakai tree)\list.cpp
 	"List.h"
 
-1561361804 c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764 (pakai tree)\list.h
+1561764768 c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764 (pakai tree)\list.h
 	<stdio.h>
 	<malloc.h>
 	<stdbool.h>
 
-1561377412 source:c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764 (pakai tree)\main.cpp
+1561762852 source:c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764 (pakai tree)\main.cpp
 	"List.h"
 	"BinaryTreeDinamis.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
+	<ctype.h>
 
 1561416116 c:\users\zaki devara\documents\sda(struktur data dan algoritma)\mergesort365764 (pakai tree)\binarytreedinamis.h
 	<stdio.h>
