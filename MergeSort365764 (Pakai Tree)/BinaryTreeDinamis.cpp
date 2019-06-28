@@ -17,6 +17,8 @@
 #include "BinaryTreeDinamis.h"
 #include <conio.h>
 
+#define COUNT 10
+
 bTree bCreateTree(){
 	bTree New;
 	New.root = NULL;

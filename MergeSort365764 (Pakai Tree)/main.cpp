@@ -59,7 +59,11 @@ address merge(address left, address right){
 
     return result;
 }
-
+void menu()
+{
+    printf("/****************MENU****************/");
+    int pil;
+}
 void mergeSort(address* head, int n){
     if(*head == NULL || (*head)->next == NULL) return;
 
@@ -75,15 +79,23 @@ void mergeSort(address* head, int n){
 }
 
 
-void insertListToTree(bTree* pohon, address head){
-    if(head == NULL) return;
+void insertListToTree(bTree* pohon, address* head){
+    if(*head == NULL) return;
 
-    while(head != NULL){
-        insertAVL(pohon->root, head->info);
-        head = head->next;
+    while(*head != NULL){
+        address temp = Del_Awal(head);
+        pohon->root = insertAVL(pohon->root, temp->info);
     }
+}
 
-
+void insertTreeToList(bAddr root, address* head){
+    if(root != NULL){
+        insertTreeToList(root->left, head);
+        address pNew = Create_Node();
+        Isi_Node(&pNew, root->info);
+        Ins_Akhir(head, pNew);
+        insertTreeToList(root->right, head);
+    }
 }
 
 int main()
@@ -101,15 +113,43 @@ int main()
     printf("List Left : ");Tampil_List(left); printf("\n");
     printf("List Right : ");Tampil_List(right); printf("\n");
 
-    insertListToTree(&pohonKiri, left);
-    insertListToTree(&pohonKanan, right);
+    insertListToTree(&pohonKiri, &left);
+    insertListToTree(&pohonKanan, &right);
+
+    //Inssert tree kiri
+//    while(left != NULL) {
+//        address temp = Del_Awal(&left);
+//        insertAVL(pohonKiri.root, temp->info);
+//    }
+//
+//
+//    //Insert tree kanan
+//    while(right != NULL) {
+//        address temp = Del_Awal(&right);
+//        insertAVL(pohonKanan.root, temp->info);
+//    }
+
+    printf("Pre Order pohonKiri : ");bPre(pohonKanan.root);
+    //Tampil pohonKiri dan pohonKanan
+    printf("\nPohon Kiri : \n");
+    print2D(pohonKiri.root); printf("\n\n");
+
+    printf("Pohon Kanan : \n");
+    print2D(pohonKanan.root);
 
 
-//    bInsertLeft(&pohon, NULL, head);
-//    Tampil_List(pohon.root->info);
+    insertTreeToList(pohonKiri.root, &left);
+    insertTreeToList(pohonKanan.root, &right);
+    printf("\n");
+    printf("List Left : ");Tampil_List(left); printf("\n");
+    printf("List Right : ");Tampil_List(right); printf("\n");
 
-    //mergeSort(&head, NbElmt(head));
-    //printf("List Akhir : ");Tampil_List(head); printf("\n");
+    // hapus list
+    while(head != NULL) Del_Awal(&head);
 
+    // gabung list
+    head = merge(right, left);
+
+    printf("List Sorted : "); Tampil_List(head);
     _getch();
 }
