@@ -37,6 +37,8 @@
 		<Unit filename="List.cpp" />
 		<Unit filename="List.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mergeSort.cpp" />
+		<Unit filename="mergeSort.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
