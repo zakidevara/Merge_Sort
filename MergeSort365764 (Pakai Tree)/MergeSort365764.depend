@@ -70,3 +70,23 @@
 	"BinaryTreeDinamis.h"
 	<conio.h>
 
+1561808692 source:c:\xampp\htdocs\repo\merge_sort\mergesort365764 (pakai tree)\binarytreedinamis.cpp
+	<limits.h>
+	<malloc.h>
+	"BinaryTreeDinamis.h"
+	<conio.h>
+
+1561808692 c:\xampp\htdocs\repo\merge_sort\mergesort365764 (pakai tree)\binarytreedinamis.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
+1561808692 source:c:\xampp\htdocs\repo\merge_sort\mergesort365764 (pakai tree)\list.cpp
+	"List.h"
+
+1561808692 c:\xampp\htdocs\repo\merge_sort\mergesort365764 (pakai tree)\list.h
+	<stdio.h>
+	<malloc.h>
+	<stdbool.h>
+
