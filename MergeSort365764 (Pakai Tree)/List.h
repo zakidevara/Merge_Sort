@@ -67,7 +67,7 @@ void Del_Akhir (address * p, infotype * X);
 /* IS : P TIDAK Kosong */
 /* FS : Elemen terakhir list dihapus : nilai info disimpan pada X */
 /* dan alamat elemen terakhir di dealokasi */
-void Del_After (address pBef);
+address Del_After (address pBef);
 /* IS : pBef TIDAK Kosong (hasil search posisi node sebelum yang didel)*/
 /* FS : menghapus Node setelah pBef */
 /* nilai info node yang dihapus disimpan pada X */

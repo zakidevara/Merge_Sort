@@ -148,7 +148,7 @@ void Del_Akhir (address * p, infotype * X){
     DeAlokasi(&PDel);
 }
 
-void Del_After (address pBef){
+address Del_After (address pBef){
 /* IS : pBef TIDAK Kosong (hasil search posisi node sebelum yang didel)*/
 /* FS : menghapus Node setelah pBef */
 /* nilai info node yang dihapus disimpan pada X */
@@ -159,7 +159,7 @@ void Del_After (address pBef){
     PNext = next(PDel);
     next(pBef) = PNext;
     next(PDel) = Nil;
-    DeAlokasi(&PDel);
+    return PDel;
 
 }
 
@@ -174,20 +174,8 @@ void DeAlokasi (address * p){
 
 int NbElmt (address p){
 /* Mengirimkan banyaknya elemen list, mengirimkan 0 jika list kosong */
-    int n;
-    n = 0;
-
-    if(isEmpty(p)){
-        return n;
-    }else{
-        n++;
-    }
-
-    while(!isEmpty(next(p))){
-        n++;
-        p = next(p);
-    }
-    return n;
+    if(p == Nil) return 0;
+    else return NbElmt(p->next) + 1;
 }
 
 // Recursif Mode

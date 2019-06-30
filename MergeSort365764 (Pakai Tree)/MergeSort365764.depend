@@ -90,3 +90,32 @@
 	<malloc.h>
 	<stdbool.h>
 
+1561855526 source:c:\users\zaki devara\documents\github\merge_sort\mergesort365764 (pakai tree)\binarytreedinamis.cpp
+	<limits.h>
+	<malloc.h>
+	"BinaryTreeDinamis.h"
+	<conio.h>
+
+1561855526 c:\users\zaki devara\documents\github\merge_sort\mergesort365764 (pakai tree)\binarytreedinamis.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
+1561855526 source:c:\users\zaki devara\documents\github\merge_sort\mergesort365764 (pakai tree)\main.cpp
+	"mergeSort.h"
+
+1561855526 c:\users\zaki devara\documents\github\merge_sort\mergesort365764 (pakai tree)\mergesort.h
+	"List.h"
+	"BinaryTreeDinamis.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1561856871 c:\users\zaki devara\documents\github\merge_sort\mergesort365764 (pakai tree)\list.h
+	<stdio.h>
+	<malloc.h>
+	<stdbool.h>
+

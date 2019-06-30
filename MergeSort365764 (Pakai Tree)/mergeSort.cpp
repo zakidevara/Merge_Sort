@@ -60,16 +60,13 @@ address merge(address left, address right){
 
 void deleteList(address* p, bType data)
 {
-    address pDel, temp = Nil;
-    pDel = Search(*p,data);
-    while(*p != Nil){
-        if((*p)->next == pDel){
-            temp = *p;
-        }
-        if(*p == pDel){
-            (*p)->next = pDel->next;
-            pDel->next = Nil;
-            free(pDel);
+    address pBef = NULL;
+    if(Search(*p, data) != NULL){
+        if((*p)->info == data){
+            free(Del_Awal(p));
+        }else{
+            pBef = SearchBfr(*p, data);
+            free(Del_After(pBef));
         }
     }
 }
@@ -172,14 +169,7 @@ void menu()
                         printf("List Sekarang : "); Tampil_List(head);
                         printf("\nMasukkan nilai yang ingin anda hapus : ");
                         scanf("%d",&del);
-                        if(Search(head, del) != NULL){
-                            if(head->info == del){
-                                free(Del_Awal(&head));
-                            }else{
-                                pBef = SearchBfr(head, del);
-                                Del_After(pBef);
-                            }
-                        }
+                        deleteList(&head, del);
                         printf("List Terbaru : "); Tampil_List(head);
                         _getch();
                         break;
