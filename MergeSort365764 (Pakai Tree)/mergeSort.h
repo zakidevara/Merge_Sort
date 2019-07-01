@@ -2,7 +2,7 @@
 // Description	: Prototype ADT Merge Sort using Binary Tree
 // Created By   : M. Zaki Devara - 181511057
 //				  Rhio Adjie F.  - 181511064
-// Last Updated	: 29 June 2019 By Agung Tri Atmojo
+// Last Updated	: 29 June 2019 By Agung Tri Atmojo - 181511036
 
 #include "List.h"
 #include "BinaryTreeDinamis.h"

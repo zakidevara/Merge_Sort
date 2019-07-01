@@ -2,7 +2,7 @@
 // Description  : Body ADT Merge Sort using Binary Tree
 // Created By   : M. Zaki Devara - 181511057
 //                Rhio Adjie F.  - 181511064
-// Last Updated : 29 June 2019 By Agung Tri Atmojo
+// Last Updated : 29 June 2019 By Agung Tri Atmojo - 181511036
 
 #include "mergeSort.h"
 
@@ -19,7 +19,7 @@ void insertList(address* head){
     address pNew = NULL;
     int jumlah;
 
-    system("cls");
+
     printf("Jumlah Input : ");
     scanf("%d", &jumlah);
 
@@ -94,7 +94,7 @@ void mergeSort(address* head){
     address left=Nil, right=Nil;
 
     pecahList(*head, &left, &right);
-    printf("\n\nList dipecah menjadi 2 bagian\n");
+    printf("\n\n1. List dipecah menjadi 2 bagian\n");
     printf("\nList Left : ");Tampil_List(left);
     printf("\nList Right : ");Tampil_List(right);
     printf("\n\nPress any key to continue..."); _getch();
@@ -104,7 +104,7 @@ void mergeSort(address* head){
 
     insertListToTree(&pohonKiri, &left);
     insertListToTree(&pohonKanan, &right);
-    printf("\n\nKedua list dimasukkan ke dalam tree AVL\n");
+    printf("\n\n2. Kedua list dimasukkan ke dalam tree AVL\n");
     printf("\nPohon Kiri : \n");
     print2D(pohonKiri.root);
     printf("\n\nPohon Kanan : \n");
@@ -114,7 +114,7 @@ void mergeSort(address* head){
     insertTreeToList(pohonKiri.root, &left);
     insertTreeToList(pohonKanan.root, &right);
 
-    printf("\n\nKedua tree dimasukkan secara in order ke listnya masing - masing");
+    printf("\n\n3. Kedua tree dimasukkan secara in order ke listnya masing - masing");
     printf("\n\nList Left : ");Tampil_List(left);
     printf("\nList Right : ");Tampil_List(right);
 
@@ -125,7 +125,7 @@ void mergeSort(address* head){
 
     // gabung list
     *head = merge(right, left);
-    printf("\n\nKedua list digabungkan kembali menjadi satu secara berurutan");
+    printf("\n\n4. Kedua list digabungkan kembali menjadi satu secara berurutan");
     printf("\n\nList Sorted : "); Tampil_List(*head);
     _getch();
 }
@@ -140,9 +140,10 @@ void menu()
     bool pulang = true;
     do{
     system("cls");
+    printf("--------------------- PROGRAM MERGE SORT ---------------------\n");
     printf("List : "); Tampil_List(head);
     printf("\nJumlah elemen : %d", NbElmt(head));
-    printf("\n\n/*********************MENU*********************/\n");
+    printf("\n\n--------------------- MENU ---------------------\n");
     printf("1. Insert\n");
     printf("2. Delete\n");
     printf("3. Sort\n");
@@ -156,24 +157,29 @@ void menu()
                         break;
 
             case 1 :    sure = 'Y';
-                        system("cls");
+
                         while(sure == 'Y'){
+                            system("cls");
+                            printf("--------------------- INSERT LIST ---------------------\n");
+                            printf("List Sekarang : "); Tampil_List(head); printf("\n");
                             insertList(&head);
-                            printf("List Saat ini : "); Tampil_List(head); printf("\n");
-                            printf("Apakah anda ingin tambah? Y/T : "); fflush(stdin);
+                            printf("List Setelah Proses Insert : "); Tampil_List(head); printf("\n");
+                            printf("Apakah anda ingin insert lagi? Y/T : "); fflush(stdin);
                             scanf("%c",&sure);
                             sure = toupper(sure);
                         }
                         break;
             case 2 :    system("cls");
+                        printf("--------------------- DELETE LIST ---------------------\n");
                         printf("List Sekarang : "); Tampil_List(head);
                         printf("\nMasukkan nilai yang ingin anda hapus : ");
                         scanf("%d",&del);
                         deleteList(&head, del);
-                        printf("List Terbaru : "); Tampil_List(head);
+                        printf("List setelah dihapus : "); Tampil_List(head);
                         _getch();
                         break;
             case 3 :    system("cls");
+                        printf("--------------------- MERGE SORT LIST ---------------------\n");
                         printf("List Sekarang : "); Tampil_List(head);
                         mergeSort(&head);
                         break;
